@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <title>Home | Parker Video Server</title>
+    <meta name="description" content="Tristin Parker CSE 341 Project 2">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+</head>
+
+<body>
+    <header>
+        <h1>
+            Parker Video Server
+        </h1>
+        <nav class="content authorized" style="display: none;">
+            <ul>
+                <li>
+                    <a href="/movies">Movies</a>
+                </li>
+                <li>
+                    <a href="/wishlist">Wishlist</a>
+                </li>
+                <li>
+                    <a href="/api-docs">Swagger</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main class="content unauthorized">
+        <a class="login" href="/oauth">Sign Into Github</a>
+    </main>
+    <footer>
+        <p>Tristin Parker - CSE 341 - Project 2</p>
+    </footer>
+    <script>
+        const URL_PARAMS = new URLSearchParams(window.location.search);
+        const TOKEN = URL_PARAMS.get('code');
+
+        // Show an element
+        const show = (selector) => {
+            document.querySelector(selector).style.display = 'block';
+        };
+
+        // Hide an element
+        const hide = (selector) => {
+            document.querySelector(selector).style.display = 'none';
+        };
+
+        if (TOKEN) {
+            hide('.content.unauthorized');
+            show('.content.authorized');
+        }
+    </script>
+    <style>
+        html {
+            background-color: blueviolet;
+        }
+
+        :root {
+            /* Color Scheme */
+            --first-color: #bababa;
+            --second-color: #8d8d8d;
+            --third-color: #a6cbeb;
+            --fourth-color: #4c96d7;
+            --fifth-color: #3a3a3a;
+            --sixth-color: #ffffff;
+        }
+
+        footer {
+            position: fixed;
+            bottom: 5%;
+            left: 2em;
+            right: 2em;
+        }
+
+        .login {
+            width: 50%;
+            text-align: center;
+            padding: 15px;
+            border: #3a3a3a solid 2px;
+            background-color: var(--third-color);
+            border-radius: 25px;
+            position: fixed;
+            top: 40%;
+            left: 25%;
+        }
+
+
+        nav {
+            background-color: var(--fifth-color);
+            width: 100%;
+        }
+
+        nav a {
+            
+        }
+
+        nav a:hover {
+            background-color: var(--third-color);
+            color: black;
+            border-radius: 5px;
+            box-shadow: 5px 5px 5px var(--fourth-color);
+        }
+
+        nav li {
+            list-style-type: none;
+            display: inline-block;
+            font-size: 15px;
+            padding-right: 5px;
+            text-decoration: none;
+            height: 10%;
+
+        }
+
+        nav ul {
+            text-decoration: none;
+            text-align: center;
+        }
+
+        footer {
+            text-align: center;
+            font-size: small;
+        }
+
+        footer hr {
+            height: 5px;
+            width: 100%;
+            background-color: var(--fifth-color);
+        }
+
+        body {
+            width: 80%;
+            margin: auto;
+        }
+    </style>
+</body>
+
+</html>
