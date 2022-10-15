@@ -35,24 +35,23 @@ const getMovie = async (req, res, next) => {
   }
 };
 
-const addMovie = async (req, res) => {
+const addAgent = async (req, res) => {
   //creates the variable of Movie so that when we post the data to the database it knows what to update where with the help of bodyparser added in the server page
-  const movie = {
-    title: req.body.title,
-    year: req.body.year,
-    runtime: req.body.runtime,
-    genre: req.body.genre,
-    director: req.body.director,
-    actors: req.body.actors,
-    plot: req.body.plot,
-    posterUrl: req.body.posterUrl
+  const agent = {
+    Agent_ID: req.body.Agent_ID,
+    First_Name: req.body.First_Name,
+    Last_Name: req.body.Last_Name,
+    Email: req.body.Email,
+    Phone: req.body.Phone,
+    Date_Hired: req.body.Date_Hired,
+    Position: req.body.Position
   };
-  if (req.body.title != null & req.body.year != null & req.body.runtime != null & req.body.genre != null & req.body.director != null & req.body.actors != null & req.body.plot != null & req.body.posterUrl != null) {
+  if (req.body.Agent_ID != null & req.body.First_Name != null & req.body.Last_Name != null & req.body.Email != null & req.body.Phone != null & req.body.Date_Hired != null & req.body.Position != null) {
     //adds the Movie to the database using the data from the Movie variable
-    const response = await mongodb.getDb().db().collection('ownedMovies').insertOne(movie);
+    const response = await mongodb.getDb().db().collection('Agents').insertOne(agent);
     //If the response back from the database was acknowledged (request successful) then note as much in the console
     if (response.acknowledged) {
-      console.log(`You have successfully added a new movie to the database.`)
+      console.log(`You have successfully added a new agent to the database.`)
     }
     //If unsuccessful show a server error of 500 and post an error message to the console
     else {
@@ -126,7 +125,7 @@ const removeMovie = async (req, res) => {
 module.exports = {
   getMovies,
   getMovie,
-  addMovie,
+  addAgent,
   updateMovie,
   removeMovie
 };

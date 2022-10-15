@@ -2,7 +2,7 @@
 const routes = require ('express').Router();
 
 //require the Movies controller so we can pull in the needed variables
-const controller = require('../controllers/movies');
+const controller = require('../controllers/agents');
 
 //If no ID is in the URL then run the .getAll function to pull the whole database
 routes.get('/', controller.getMovies);
@@ -11,7 +11,7 @@ routes.get('/', controller.getMovies);
 routes.get('/:id', controller.getMovie);
 
 //Allows the user to run the function createMovie and post that data to mongoDB
-routes.post('/', controller.addMovie);
+routes.post('/', controller.addAgent);
 
 //Allows the user to run the function updateMovie and update the data that was retrieved from mongoDB
 routes.put('/:id', controller.updateMovie);

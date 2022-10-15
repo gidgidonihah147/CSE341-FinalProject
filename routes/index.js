@@ -5,7 +5,7 @@ routes.use('/', require('./swagger'));
 
 routes.use('/oauth', require('./oauth'));
 routes.use('/oauth-callback', require('./oauth-callback'));
-routes.use('/movies', require('./movies'));
+routes.use('/agents', require('./agents'));
 routes.use('/wishlist', require('./wishlist'));
 routes.use('/',(req,res)=>{
     const htmlFile= './main/index.html';
