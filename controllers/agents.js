@@ -63,6 +63,22 @@ const addAgent = async (req, res) => {
   }
 };
 
+// get all agents
+const getAgents = async (req, res, next) => {
+  //pull all documents from the listed database(homes) as there is nothing in the find perimeters
+  const result = await mongodb.getDb().db("homes").collection('Agents').find();
+
+  //Display the results of the search in an array so its readable in chrome
+  if (result == null) {
+    res.status(500).json(response.error || 'There was an error while adding your movie. Please try again.');
+  } else {
+    result.toArray().then((lists) => {
+      res.setHeader('Content-Type', 'application/json');
+      res.status(200).json(lists);
+    });
+  }
+};
+
 
 // const updateMovie = async (req, res) => {
 //   //Interact with the URL to get the object which in this case would be the ID of the movie
@@ -126,6 +142,7 @@ module.exports = {
   //getMovies,
   //getMovie,
   addAgent,
+  getAgents
   //updateMovie,
   //removeMovie
 };
