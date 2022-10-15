@@ -51,6 +51,7 @@ const addAgent = async (req, res) => {
     const response = await mongodb.getDb().db().collection('Agents').insertOne(agent);
     //If the response back from the database was acknowledged (request successful) then note as much in the console
     if (response.acknowledged) {
+      res.status(200).json(response);
       console.log(`You have successfully added a new agent to the database.`)
     }
     //If unsuccessful show a server error of 500 and post an error message to the console
