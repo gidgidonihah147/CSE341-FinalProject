@@ -3,10 +3,10 @@ const fs = require('fs');
 
 routes.use('/', require('./swagger'));
 
-routes.use('/oauth', require('./oauth'));
-routes.use('/oauth-callback', require('./oauth-callback'));
+//routes.use('/oauth', require('./oauth'));
+//routes.use('/oauth-callback', require('./oauth-callback'));
 routes.use('/agents', require('./agents'));
-routes.use('/wishlist', require('./wishlist'));
+//routes.use('/wishlist', require('./wishlist'));
 routes.use('/',(req,res)=>{
     const htmlFile= './main/index.html';
     res.statusCode = 200;
