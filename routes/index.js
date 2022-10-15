@@ -7,6 +7,7 @@ routes.use('/oauth', require('./oauth'));
 routes.use('/oauth-callback', require('./oauth-callback'));
 routes.use('/movies', require('./movies'));
 routes.use('/wishlist', require('./wishlist'));
+routes.use('/buyers', require('./buyers'));
 routes.use('/',(req,res)=>{
     const htmlFile= './main/index.html';
     res.statusCode = 200;
