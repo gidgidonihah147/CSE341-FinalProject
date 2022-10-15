@@ -5,7 +5,7 @@ const doc = {
         title: 'CSE341-Project2',
         description: 'Swagger API Documentation for project 2 assigment for CSE 341 - Tristin Parker'
     },
-    host: 'cse341-project2.onrender.com',
+    host: 'homesforsalenow.onrender.com',
     schemes: ['https']
 };
 

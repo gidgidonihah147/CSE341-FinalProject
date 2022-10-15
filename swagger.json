@@ -5,7 +5,7 @@
     "description": "Swagger API Documentation for project 2 assigment for CSE 341 - Tristin Parker",
     "version": "1.0.0"
   },
-  "host": "cse341-project2.onrender.com",
+  "host": "homesforsalenow.onrender.com",
   "basePath": "/",
   "schemes": [
     "https"
