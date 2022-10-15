@@ -3,8 +3,8 @@
 
 
 <head>
-    <title>Home | Parker Video Server</title>
-    <meta name="description" content="Tristin Parker CSE 341 Project 2">
+    <title>Home | Homes For Sale Now</title>
+    <meta name="description" content="Real Estate Group CSE 341 Final Project">
     <meta name="viewport" content="width=device-width">
     <link rel="stylesheet" href="styles.css">
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
@@ -13,15 +13,21 @@
 <body>
     <header>
         <h1>
-            Parker Video Server
+            Homes For Sale Now
         </h1>
         <nav class="content authorized" style="display: none;">
             <ul>
                 <li>
-                    <a href="/movies">Movies</a>
+                    <a href="/Agents">Real Estate Agents</a>
                 </li>
                 <li>
-                    <a href="/wishlist">Wishlist</a>
+                    <a href="/Homes">Homes For Sale</a>
+                </li>
+                <li>
+                    <a href="/Buyers">Perspective Buyers</a>
+                </li>
+                <li>
+                    <a href="/Closed-Deals">Recently Closed Deals</a>
                 </li>
                 <li>
                     <a href="/api-docs">Swagger</a>
@@ -33,7 +39,7 @@
         <a class="login" href="/oauth">Sign Into Github</a>
     </main>
     <footer>
-        <p>Tristin Parker - CSE 341 - Project 2</p>
+        <p>Homes For Sale Now - CSE 341 - Group Project</p>
     </footer>
     <script>
         const URL_PARAMS = new URLSearchParams(window.location.search);
@@ -55,20 +61,18 @@
         }
     </script>
     <style>
-        html {
-            background-color: blueviolet;
-        }
-
         :root {
             /* Color Scheme */
             --first-color: #bababa;
             --second-color: #8d8d8d;
             --third-color: #a6cbeb;
-            --fourth-color: #4c96d7;
+            --fourth-color: #blueviolet;
             --fifth-color: #3a3a3a;
             --sixth-color: #ffffff;
         }
-
+        html {
+            background-color: var(--fourth-color);
+        }
         footer {
             position: fixed;
             bottom: 5%;
@@ -94,9 +98,6 @@
             width: 100%;
         }
 
-        nav a {
-            
-        }
 
         nav a:hover {
             background-color: var(--third-color);
