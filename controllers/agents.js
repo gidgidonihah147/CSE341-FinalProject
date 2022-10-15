@@ -1,7 +1,7 @@
 // //Pull the DB connection from the database file
-// const mongodb = require('../database/mongodb');
+ const mongodb = require('../database/mongodb');
 // //Pull in the object id from the URL for the getSingle search
-// const ObjectId = require('mongodb').ObjectId;
+ const ObjectId = require('mongodb').ObjectId;
 
 // const getMovies = async (req, res, next) => {
 //   //pull all documents from the listed database as there is nothing in the find perimeters
