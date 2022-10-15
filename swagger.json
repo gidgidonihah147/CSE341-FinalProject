@@ -36,7 +36,7 @@
         }
       }
     },
-    "/movies/": {
+    "/agents/": {
       "get": {
         "description": "",
         "produces": [
@@ -61,28 +61,25 @@
             "schema": {
               "type": "object",
               "properties": {
-                "title": {
+                "Agent_ID": {
                   "example": "any"
                 },
-                "year": {
+                "First_Name": {
                   "example": "any"
                 },
-                "runtime": {
+                "Last_Name": {
                   "example": "any"
                 },
-                "genre": {
+                "Email": {
                   "example": "any"
                 },
-                "director": {
+                "Phone": {
                   "example": "any"
                 },
-                "actors": {
+                "Date_Hired": {
                   "example": "any"
                 },
-                "plot": {
-                  "example": "any"
-                },
-                "posterUrl": {
+                "Position": {
                   "example": "any"
                 }
               }
@@ -99,7 +96,7 @@
         }
       }
     },
-    "/movies/{id}": {
+    "/agents/{id}": {
       "get": {
         "description": "",
         "produces": [
