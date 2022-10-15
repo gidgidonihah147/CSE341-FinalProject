@@ -15,14 +15,20 @@
         <h1>
             Homes For Sale Now
         </h1>
-        <nav class="content authorized" style="display: none;">
+        <div class="content unauthorized">
+            <a class="login" href="/oauth">Sign Into Github</a>
+        </div>
+        <nav>
             <ul>
+                <li class="homes">
+                    <a href="/Homes">Homes For Sale</a>
+                </li>
+            </ul>
+            <ul class="content authorized" style="display: none;">
                 <li>
                     <a href="/Agents">Real Estate Agents</a>
                 </li>
-                <li>
-                    <a href="/Homes">Homes For Sale</a>
-                </li>
+                
                 <li>
                     <a href="/Buyers">Perspective Buyers</a>
                 </li>
@@ -35,8 +41,11 @@
             </ul>
         </nav>
     </header>
-    <main class="content unauthorized">
+    <div class="content unauthorized">
         <a class="login" href="/oauth">Sign Into Github</a>
+    </div>
+    <main>
+        <p>${render}</p>
     </main>
     <footer>
         <p>Homes For Sale Now - CSE 341 - Group Project</p>
@@ -71,7 +80,7 @@
             --sixth-color: #ffffff;
         }
         html {
-            background-color: var(--fourth-color);
+            background-color: blueviolet;
         }
         footer {
             position: fixed;
@@ -81,21 +90,25 @@
         }
 
         .login {
-            width: 50%;
-            text-align: center;
+            width: 10%;
+            text-align: top;
             padding: 15px;
             border: #3a3a3a solid 2px;
             background-color: var(--third-color);
             border-radius: 25px;
             position: fixed;
-            top: 40%;
-            left: 25%;
+            top: 3%;
+            right: 10%;
         }
 
 
         nav {
             background-color: var(--fifth-color);
             width: 100%;
+        }
+
+        nav a{
+            color: var(--sixth-color);
         }
 
 
