@@ -1,0 +1,301 @@
+// localhost
+
+// Agents get request localhost:3000 
+### Get Agents 
+GET  http://localhost:3000/agents HTTP/1.1
+
+# get agent by id
+
+GET  http://localhost:3000/agents/420942394 HTTP/1.1
+
+
+#Post agent with the following body Agent_ID, First_Name, Last_Name, Email, Phone, Date_Hired, Position
+
+
+POST  http://localhost:3000/agents HTTP/1.1 Content-Type: application/json
+{
+    "Agent_ID": "420942394",
+    "First_Name": "John",
+    "Last_Name": "Doe",
+    "Email": "johnDoe@fakemail.com",
+    "Phone": "555-555-5555",
+    "Date_Hired": "2019-01-01",
+    "Position": "Agent"
+}
+
+#Put agent
+
+PUT  http://localhost:3000/agents/420942394 HTTP/1.1 Content-Type: application/json
+{
+     "Agent_ID": "420942394",
+    "First_Name": "John",
+    "Last_Name": "Doe",
+    "Email": "johnDoe@fakemail.com",
+    "Phone": "555-555-5554",
+    "Date_Hired": "2019-01-01",
+    "Position": "Agent"
+}
+
+#Delete agent
+
+DELETE  http://localhost:3000/agents/420942394 HTTP/1.1
+
+
+// Get Homes
+
+GET  http://localhost:3000/homes HTTP/1.1
+
+// Get Home by id
+
+GET  http://localhost:3000/homes/420942394 HTTP/1.1
+
+// Post Home with the following Home_ID, Address, Price, Agent, Date_Posted
+
+
+POST  http://localhost:3000/homes HTTP/1.1 Content-Type: application/json
+{
+    "Home_ID": "420942394",
+    "Address": "123 Fake St",
+    "Price": "100000",
+    "Agent": "420942394",
+    "Date_Posted": "2019-01-01"
+}
+
+// Put Home
+
+PUT  http://localhost:3000/homes/420942394 HTTP/1.1 Content-Type: application/json
+{
+    "Home_ID": "420942394",
+    "Address": "123 Fake St",
+    "Price": "1000001",
+    "Agent": "420942394",
+    "Date_Posted": "2019-01-01"
+
+}
+
+// Delete Home
+
+DELETE  http://localhost:3000/homes/420942394 HTTP/1.1
+
+# Get buyers
+
+GET  http://localhost:3000/buyers HTTP/1.1
+
+# Get buyer by id
+
+GET  http://localhost:3000/buyers/420942394 HTTP/1.1 
+
+# Post buyer with the following Buyer_ID, First_Name, Last_Name, Email, Phone, Birthday, Age
+
+POST  http://localhost:3000/buyers HTTP/1.1 Content-Type: application/json
+{
+    "Buyer_ID": "420942394",
+    "First_Name": "John",
+    "Last_Name": "Doe",
+    "Email": "johndoe@fakemail.com",
+    "Phone": "555-555-5555",
+    "Birthday": "2019-01-01",
+    "Age": "21"
+}
+
+# Put buyer
+
+PUT  http://localhost:3000/buyers/420942394 HTTP/1.1 Content-Type: application/json
+{
+     "Buyer_ID": "420942394",
+    "First_Name": "John",
+    "Last_Name": "Doe",
+    "Email": "johndoe@fakemaisl.com",
+    "Phone": "555-555-5555",
+    "Birthday": "2019-01-01",
+    "Age": "21"
+}
+
+# Delete buyer
+
+DELETE  http://localhost:3000/buyers/420942394 HTTP/1.1
+
+
+# get closed deals
+
+GET  http://localhost:3000/closeddeals HTTP/1.1
+
+# get closed deals by id
+
+GET  http://localhost:3000/closeddeals/420942394 HTTP/1.1
+
+
+# Post closed deal with the following Home_ID, Buyer_ID, Address, Sold_Price, Date_Closed
+
+
+POST  http://localhost:3000/closeddeals HTTP/1.1 Content-Type: application/json
+{
+    "Home_ID": "420942394",
+    "Buyer_ID": "420942394",
+    "Address": "123 Fake St",
+    "Sold_Price": "100000",
+    "Date_Closed": "2019-01-01"
+}
+
+# Put closed deal
+
+PUT  http://localhost:3000/closeddeals/420942394 HTTP/1.1 Content-Type: application/json
+{
+     "Home_ID": "420942393",
+    "Buyer_ID": "420942396",
+    "Address": "123 Fake St",
+    "Sold_Price": "100000",
+    "Date_Closed": "2019-01-01"
+}
+
+# Delete closed deal
+
+DELETE  http://localhost:3000/closeddeals/420942394 HTTP/1.1
+
+
+# api request for https://homesforsalenow.onrender.com
+
+# get agents
+
+GET  https://homesforsalenow.onrender.com/agents HTTP/1.1
+
+# get agent by id
+
+GET  https://homesforsalenow.onrender.com/agents/420942394 HTTP/1.1
+
+# Post agent
+
+POST  https://homesforsalenow.onrender.com/agents HTTP/1.1 Content-Type: application/json
+{
+     "Agent_ID": "420942394",
+    "First_Name": "John",
+    "Last_Name": "Doe",
+    "Email": "johnDoe@fakemail.com",
+    "Phone": "555-555-5555",
+    "Date_Hired": "2019-01-01",
+    "Position": "Agent"
+}
+
+# Put agent
+
+PUT  https://homesforsalenow.onrender.com/agents/420942394 HTTP/1.1 Content-Type: application/json
+{
+    "Agent_ID": "420942394",
+    "First_Name": "John",
+    "Last_Name": "Doe",
+    "Email": "johnDoe@fakemail.com",
+    "Phone": "555-555-5555",
+    "Date_Hired": "2019-01-01",
+    "Position": "Agent"
+}
+
+# Delete agent
+
+DELETE  https://homesforsalenow.onrender.com/agents/420942394 HTTP/1.1
+
+# get homes
+
+GET  https://homesforsalenow.onrender.com/homes HTTP/1.1
+
+# get home by id
+
+GET  https://homesforsalenow.onrender.com/homes/420942394 HTTP/1.1
+
+# Post home
+
+POST  https://homesforsalenow.onrender.com/homes HTTP/1.1 Content-Type: application/json
+{
+     "Home_ID": "420942394",
+    "Address": "123 Fake St",
+    "Price": "100000",
+    "Agent": "420942394",
+    "Date_Posted": "2019-01-01"
+}
+
+# Put home
+
+PUT  https://homesforsalenow.onrender.com/homes/420942394 HTTP/1.1 Content-Type: application/json
+{
+    "Home_ID": "420942394",
+    "Address": "123 Fake St",
+    "Price": "100000",
+    "Agent": "420942394",
+    "Date_Posted": "2019-01-01"
+}
+
+# Delete home
+
+DELETE  https://homesforsalenow.onrender.com/homes/420942394 HTTP/1.1
+
+# get buyers
+
+GET  https://homesforsalenow.onrender.com/buyers HTTP/1.1
+
+# get buyer by id
+
+GET  https://homesforsalenow.onrender.com/buyers/420942394 HTTP/1.1
+
+# Post buyer
+
+POST  https://homesforsalenow.onrender.com/buyers HTTP/1.1 Content-Type: application/json
+{
+    "Buyer_ID": "420942394",
+    "First_Name": "John",
+    "Last_Name": "Doe",
+    "Email": "johndoe@fakemail.com",
+    "Phone": "555-555-5555",
+    "Birthday": "2019-01-01",
+    "Age": "21"
+}
+
+# Put buyer
+
+PUT  https://homesforsalenow.onrender.com/buyers/420942394 HTTP/1.1 Content-Type: application/json
+{
+     "Buyer_ID": "420942394",
+    "First_Name": "John",
+    "Last_Name": "Doe",
+    "Email": "johndoe@fakemail.com",
+    "Phone": "555-555-5555",
+    "Birthday": "2019-01-01",
+    "Age": "21"
+}
+
+# Delete buyer
+
+DELETE  https://homesforsalenow.onrender.com/buyers/420942394 HTTP/1.1
+
+# get closed deals
+
+GET  https://homesforsalenow.onrender.com/closeddeals HTTP/1.1
+
+# get closed deals by id
+
+GET  https://homesforsalenow.onrender.com/closeddeals/420942394 HTTP/1.1
+
+# Post closed deal
+
+POST  https://homesforsalenow.onrender.com/closeddeals HTTP/1.1 Content-Type: application/json
+{
+    "Home_ID": "420942394",
+    "Buyer_ID": "420942394",
+    "Address": "123 Fake St",
+    "Sold_Price": "100000",
+    "Date_Closed": "2019-01-01"
+}
+
+# Put closed deal
+
+PUT  https://homesforsalenow.onrender.com/closeddeals/420942394 HTTP/1.1 Content-Type: application/json
+{
+    "Home_ID": "420942394",
+    "Buyer_ID": "420942394",
+    "Address": "123 Fake St",
+    "Sold_Price": "100000",
+    "Date_Closed": "2019-01-01"
+}
+
+# Delete closed deal
+
+DELETE  https://homesforsalenow.onrender.com/closeddeals/420942394 HTTP/1.1
+
