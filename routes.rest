@@ -4,15 +4,17 @@
 ### Get Agents 
 GET  http://localhost:3000/agents HTTP/1.1
 
-# get agent by id
+### get agent by id
 
 GET  http://localhost:3000/agents/420942394 HTTP/1.1
 
 
-#Post agent with the following body Agent_ID, First_Name, Last_Name, Email, Phone, Date_Hired, Position
+###Post agent with the following body Agent_ID, First_Name, Last_Name, Email, Phone, Date_Hired, Position
 
 
-POST  http://localhost:3000/agents HTTP/1.1 Content-Type: application/json
+POST  http://localhost:3000/agents HTTP/1.1 
+Content-Type: application/json
+
 {
     "Agent_ID": "420942394",
     "First_Name": "John",
@@ -23,9 +25,11 @@ POST  http://localhost:3000/agents HTTP/1.1 Content-Type: application/json
     "Position": "Agent"
 }
 
-#Put agent
+###Put agent
 
-PUT  http://localhost:3000/agents/420942394 HTTP/1.1 Content-Type: application/json
+PUT  http://localhost:3000/agents/420942394 HTTP/1.1 
+Content-Type: application/json
+
 {
      "Agent_ID": "420942394",
     "First_Name": "John",
@@ -36,20 +40,20 @@ PUT  http://localhost:3000/agents/420942394 HTTP/1.1 Content-Type: application/j
     "Position": "Agent"
 }
 
-#Delete agent
+###Delete agent
 
 DELETE  http://localhost:3000/agents/420942394 HTTP/1.1
 
 
-// Get Homes
+### Get Homes
 
 GET  http://localhost:3000/homes HTTP/1.1
 
-// Get Home by id
+### Get Home by id
 
 GET  http://localhost:3000/homes/420942394 HTTP/1.1
 
-// Post Home with the following Home_ID, Address, Price, Agent, Date_Posted
+### Post Home with the following Home_ID, Address, Price, Agent, Date_Posted
 
 
 POST  http://localhost:3000/homes HTTP/1.1 Content-Type: application/json
@@ -61,9 +65,11 @@ POST  http://localhost:3000/homes HTTP/1.1 Content-Type: application/json
     "Date_Posted": "2019-01-01"
 }
 
-// Put Home
+### Put Home
 
-PUT  http://localhost:3000/homes/420942394 HTTP/1.1 Content-Type: application/json
+PUT  http://localhost:3000/homes/420942394 HTTP/1.1 
+Content-Type: application/json
+
 {
     "Home_ID": "420942394",
     "Address": "123 Fake St",
@@ -73,21 +79,23 @@ PUT  http://localhost:3000/homes/420942394 HTTP/1.1 Content-Type: application/js
 
 }
 
-// Delete Home
+### Delete Home
 
 DELETE  http://localhost:3000/homes/420942394 HTTP/1.1
 
-# Get buyers
+### Get buyers
 
 GET  http://localhost:3000/buyers HTTP/1.1
 
-# Get buyer by id
+### Get buyer by id
 
 GET  http://localhost:3000/buyers/420942394 HTTP/1.1 
 
-# Post buyer with the following Buyer_ID, First_Name, Last_Name, Email, Phone, Birthday, Age
+### Post buyer with the following Buyer_ID, First_Name, Last_Name, Email, Phone, Birthday, Age
 
-POST  http://localhost:3000/buyers HTTP/1.1 Content-Type: application/json
+POST  http://localhost:3000/buyers HTTP/1.1 
+Content-Type: application/json
+
 {
     "Buyer_ID": "420942394",
     "First_Name": "John",
@@ -98,9 +106,11 @@ POST  http://localhost:3000/buyers HTTP/1.1 Content-Type: application/json
     "Age": "21"
 }
 
-# Put buyer
+### Put buyer
 
-PUT  http://localhost:3000/buyers/420942394 HTTP/1.1 Content-Type: application/json
+PUT  http://localhost:3000/buyers/420942394 HTTP/1.1 
+Content-Type: application/json
+
 {
      "Buyer_ID": "420942394",
     "First_Name": "John",
@@ -111,24 +121,26 @@ PUT  http://localhost:3000/buyers/420942394 HTTP/1.1 Content-Type: application/j
     "Age": "21"
 }
 
-# Delete buyer
+### Delete buyer
 
 DELETE  http://localhost:3000/buyers/420942394 HTTP/1.1
 
 
-# get closed deals
+### get closed deals
 
 GET  http://localhost:3000/closeddeals HTTP/1.1
 
-# get closed deals by id
+### get closed deals by id
 
 GET  http://localhost:3000/closeddeals/420942394 HTTP/1.1
 
 
-# Post closed deal with the following Home_ID, Buyer_ID, Address, Sold_Price, Date_Closed
+### Post closed deal with the following Home_ID, Buyer_ID, Address, Sold_Price, Date_Closed
 
 
-POST  http://localhost:3000/closeddeals HTTP/1.1 Content-Type: application/json
+POST  http://localhost:3000/closeddeals HTTP/1.1 
+Content-Type: application/json
+
 {
     "Home_ID": "420942394",
     "Buyer_ID": "420942394",
@@ -137,9 +149,11 @@ POST  http://localhost:3000/closeddeals HTTP/1.1 Content-Type: application/json
     "Date_Closed": "2019-01-01"
 }
 
-# Put closed deal
+### Put closed deal
 
-PUT  http://localhost:3000/closeddeals/420942394 HTTP/1.1 Content-Type: application/json
+PUT  http://localhost:3000/closeddeals/420942394 HTTP/1.1 
+Content-Type: application/json
+
 {
      "Home_ID": "420942393",
     "Buyer_ID": "420942396",
@@ -148,24 +162,26 @@ PUT  http://localhost:3000/closeddeals/420942394 HTTP/1.1 Content-Type: applicat
     "Date_Closed": "2019-01-01"
 }
 
-# Delete closed deal
+### Delete closed deal
 
 DELETE  http://localhost:3000/closeddeals/420942394 HTTP/1.1
 
 
-# api request for https://homesforsalenow.onrender.com
+### api request for https://homesforsalenow.onrender.com
 
-# get agents
+### get agents
 
 GET  https://homesforsalenow.onrender.com/agents HTTP/1.1
 
-# get agent by id
+### get agent by id
 
 GET  https://homesforsalenow.onrender.com/agents/420942394 HTTP/1.1
 
-# Post agent
+### Post agent
 
-POST  https://homesforsalenow.onrender.com/agents HTTP/1.1 Content-Type: application/json
+POST  https://homesforsalenow.onrender.com/agents HTTP/1.1 
+Content-Type: application/json
+
 {
      "Agent_ID": "420942394",
     "First_Name": "John",
@@ -176,9 +192,11 @@ POST  https://homesforsalenow.onrender.com/agents HTTP/1.1 Content-Type: applica
     "Position": "Agent"
 }
 
-# Put agent
+### Put agent
 
-PUT  https://homesforsalenow.onrender.com/agents/420942394 HTTP/1.1 Content-Type: application/json
+PUT  https://homesforsalenow.onrender.com/agents/420942394 HTTP/1.1 
+Content-Type: application/json
+
 {
     "Agent_ID": "420942394",
     "First_Name": "John",
@@ -189,21 +207,23 @@ PUT  https://homesforsalenow.onrender.com/agents/420942394 HTTP/1.1 Content-Type
     "Position": "Agent"
 }
 
-# Delete agent
+### Delete agent
 
 DELETE  https://homesforsalenow.onrender.com/agents/420942394 HTTP/1.1
 
-# get homes
+### get homes
 
 GET  https://homesforsalenow.onrender.com/homes HTTP/1.1
 
-# get home by id
+### get home by id
 
 GET  https://homesforsalenow.onrender.com/homes/420942394 HTTP/1.1
 
-# Post home
+### Post home
 
-POST  https://homesforsalenow.onrender.com/homes HTTP/1.1 Content-Type: application/json
+POST  https://homesforsalenow.onrender.com/homes HTTP/1.1 
+Content-Type: application/json
+
 {
      "Home_ID": "420942394",
     "Address": "123 Fake St",
@@ -212,9 +232,11 @@ POST  https://homesforsalenow.onrender.com/homes HTTP/1.1 Content-Type: applicat
     "Date_Posted": "2019-01-01"
 }
 
-# Put home
+### Put home
 
-PUT  https://homesforsalenow.onrender.com/homes/420942394 HTTP/1.1 Content-Type: application/json
+PUT  https://homesforsalenow.onrender.com/homes/420942394 HTTP/1.1 
+Content-Type: application/json
+
 {
     "Home_ID": "420942394",
     "Address": "123 Fake St",
@@ -223,21 +245,23 @@ PUT  https://homesforsalenow.onrender.com/homes/420942394 HTTP/1.1 Content-Type:
     "Date_Posted": "2019-01-01"
 }
 
-# Delete home
+### Delete home
 
 DELETE  https://homesforsalenow.onrender.com/homes/420942394 HTTP/1.1
 
-# get buyers
+### get buyers
 
 GET  https://homesforsalenow.onrender.com/buyers HTTP/1.1
 
-# get buyer by id
+### get buyer by id
 
 GET  https://homesforsalenow.onrender.com/buyers/420942394 HTTP/1.1
 
-# Post buyer
+### Post buyer
 
-POST  https://homesforsalenow.onrender.com/buyers HTTP/1.1 Content-Type: application/json
+POST  https://homesforsalenow.onrender.com/buyers HTTP/1.1 
+Content-Type: application/json
+
 {
     "Buyer_ID": "420942394",
     "First_Name": "John",
@@ -248,9 +272,11 @@ POST  https://homesforsalenow.onrender.com/buyers HTTP/1.1 Content-Type: applica
     "Age": "21"
 }
 
-# Put buyer
+### Put buyer
 
-PUT  https://homesforsalenow.onrender.com/buyers/420942394 HTTP/1.1 Content-Type: application/json
+PUT  https://homesforsalenow.onrender.com/buyers/420942394 HTTP/1.1 
+Content-Type: application/json
+
 {
      "Buyer_ID": "420942394",
     "First_Name": "John",
@@ -261,21 +287,23 @@ PUT  https://homesforsalenow.onrender.com/buyers/420942394 HTTP/1.1 Content-Type
     "Age": "21"
 }
 
-# Delete buyer
+### Delete buyer
 
 DELETE  https://homesforsalenow.onrender.com/buyers/420942394 HTTP/1.1
 
-# get closed deals
+### get closed deals
 
 GET  https://homesforsalenow.onrender.com/closeddeals HTTP/1.1
 
-# get closed deals by id
+### get closed deals by id
 
 GET  https://homesforsalenow.onrender.com/closeddeals/420942394 HTTP/1.1
 
-# Post closed deal
+### Post closed deal
 
-POST  https://homesforsalenow.onrender.com/closeddeals HTTP/1.1 Content-Type: application/json
+POST  https://homesforsalenow.onrender.com/closeddeals HTTP/1.1
+ Content-Type: application/json
+
 {
     "Home_ID": "420942394",
     "Buyer_ID": "420942394",
@@ -284,9 +312,11 @@ POST  https://homesforsalenow.onrender.com/closeddeals HTTP/1.1 Content-Type: ap
     "Date_Closed": "2019-01-01"
 }
 
-# Put closed deal
+### Put closed deal
 
-PUT  https://homesforsalenow.onrender.com/closeddeals/420942394 HTTP/1.1 Content-Type: application/json
+PUT  https://homesforsalenow.onrender.com/closeddeals/420942394 HTTP/1.1 
+Content-Type: application/json
+
 {
     "Home_ID": "420942394",
     "Buyer_ID": "420942394",
@@ -295,7 +325,7 @@ PUT  https://homesforsalenow.onrender.com/closeddeals/420942394 HTTP/1.1 Content
     "Date_Closed": "2019-01-01"
 }
 
-# Delete closed deal
+### Delete closed deal
 
 DELETE  https://homesforsalenow.onrender.com/closeddeals/420942394 HTTP/1.1
 
