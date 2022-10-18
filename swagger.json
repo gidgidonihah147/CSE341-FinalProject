@@ -5,10 +5,10 @@
     "description": "Swagger API Documentation for the final projec",
     "version": "1.0.0"
   },
-  "host": "localhost:3000",
+  "host": "homesforsalenow.onrender.com",
   "basePath": "/",
   "schemes": [
-    "http"
+    "https"
   ],
   "paths": {
     "/api-docs": {
@@ -19,8 +19,23 @@
       }
     },
     "/agents/": {
+      "get": {
+        "description": "Get a list of all Agents",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      },
       "post": {
-        "description": "",
+        "description": "Add an agent to the list",
         "parameters": [
           {
             "name": "body",
@@ -54,8 +69,106 @@
           }
         ],
         "responses": {
+          "201": {
+            "description": "Created"
+          },
+          "400": {
+            "description": "Bad Request"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    },
+    "/agents/{id}": {
+      "get": {
+        "description": "Get a single Agent based on its ID",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
           "200": {
             "description": "OK"
+          },
+          "400": {
+            "description": "Bad Request"
+          }
+        }
+      },
+      "put": {
+        "description": "Modify the information of an Agent based on its ID",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "body",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "Agent_ID": {
+                  "example": "any"
+                },
+                "First_Name": {
+                  "example": "any"
+                },
+                "Last_Name": {
+                  "example": "any"
+                },
+                "Email": {
+                  "example": "any"
+                },
+                "Phone": {
+                  "example": "any"
+                },
+                "Date_Hired": {
+                  "example": "any"
+                },
+                "Position": {
+                  "example": "any"
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "No Content"
+          },
+          "400": {
+            "description": "Bad Request"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      },
+      "delete": {
+        "description": "Delete an Agent based on its ID",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "No Content"
           },
           "400": {
             "description": "Bad Request"
