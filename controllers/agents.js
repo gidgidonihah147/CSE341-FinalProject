@@ -1,7 +1,7 @@
-// //Pull the DB connection from the database file
- const mongodb = require('../database/mongodb');
-// //Pull in the object id from the URL for the getSingle search
- const ObjectId = require('mongodb').ObjectId;
+//Pull the DB connection from the database file
+const mongodb = require('../database/mongodb');
+//Pull in the object id from the URL for the getSingle search
+const ObjectId = require('mongodb').ObjectId;
 
 // const getMovies = async (req, res, next) => {
 //   //pull all documents from the listed database as there is nothing in the find perimeters
@@ -48,7 +48,7 @@ const addAgent = async (req, res) => {
   };
   if (req.body.Agent_ID != null & req.body.First_Name != null & req.body.Last_Name != null & req.body.Email != null & req.body.Phone != null & req.body.Date_Hired != null & req.body.Position != null) {
     //adds the Movie to the database using the data from the Movie variable
-    const response = await mongodb.getDb().db("homes").collection('Agents').insertOne(agent);
+    const response = await mongodb.getDb().db('homes').collection('Agents').insertOne(agent);
     //If the response back from the database was acknowledged (request successful) then note as much in the console
     if (response.acknowledged) {
       res.status(200).json(response);
