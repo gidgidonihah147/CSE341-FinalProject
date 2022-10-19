@@ -4,7 +4,8 @@ const {
   ServerApiVersion
 } = require('mongodb');
 //pulls in the .env environment file so we can hide the sensitive information
-require("dotenv").config();
+const dotenv = require("dotenv");
+dotenv.config();
 
 //Create a variable to assign the database to once its initialized
 let _db;
