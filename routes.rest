@@ -51,7 +51,7 @@ GET  http://localhost:3000/homes HTTP/1.1
 
 ### Get Home by id
 
-GET  http://localhost:3000/homes/420942394 HTTP/1.1
+GET  http://localhost:3000/homes/634f520a556cbeedfdf7ac43 HTTP/1.1
 
 ### Post Home with the following Home_ID, Address, Price, Agent, Date_Posted
 

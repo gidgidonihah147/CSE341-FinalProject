@@ -1,7 +1,7 @@
 const routes = require('express').Router();
 require("dotenv").config();
 
-const client = process.env.github_ClientId;
+const client = process.env.GITHUB_CLIENT_ID;
 
 routes.get('/',(req,res) =>{
     res.redirect(
