@@ -18,8 +18,8 @@ app
 mongodb.initDb((err, mongodb) => {
       //pulls in the port to the express data
       app.listen(port);
-      //outputs an error if there is one while connecting to the database
-      console.log(`Error: ${err}`);
       //outputs the current port in use to the log & lets the server know the initDB was run correctly.
-      console.log(`Connected to Mongo DB and available on port:${port}`);
+      console.log(`Server running and available on port:${port}`);
+      //outputs an error if there is one while connecting to the database
+      console.log(`Mongo DB Connection Error: ${err}`);
   });

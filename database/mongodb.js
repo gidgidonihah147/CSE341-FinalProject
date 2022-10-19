@@ -25,6 +25,7 @@ const initDb = (callback) => {
       _db = client;
       //applies the data to the callback so it can return to the server
       callback(null, _db);
+      console.log("Connected to Mongo DB Successfully");
     })
     //if there is an error, it returns the error to the callback to the server
     .catch((err) => {
