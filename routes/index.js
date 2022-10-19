@@ -6,6 +6,7 @@ routes.use('/', require('./swagger'));
 routes.use('/oauth', require('./oauth'));
 routes.use('/oauth-callback', require('./oauth-callback'));
 routes.use('/agents', require('./agents'));
+routes.use('/buyers', require('./buyers'));
 routes.use('/closed_deals', require('./closed_deals'));
 
 routes.use('/',(req,res)=>{
