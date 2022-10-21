@@ -1,6 +1,7 @@
 const mongodb = require('../database/mongodb');
 const ObjectId = require('mongodb').ObjectId;
 
+
 const getAllBuyers = async (req, res, next) => {
   try {
     const result = await mongodb.getDb().db().collection('Buyers').find();

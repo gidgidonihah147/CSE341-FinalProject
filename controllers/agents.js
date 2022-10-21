@@ -3,18 +3,18 @@ const mongodb = require('../database/mongodb');
 //Pull in the object id from the URL for the getSingle search
 const ObjectId = require('mongodb').ObjectId;
 
+
 // get all agents
 const getAgents = async (req, res) => {
   // #swagger.description = 'Get a list of all Agents'
   //pull all documents from the listed database(homes) as there is nothing in the find perimeters
   const result = await mongodb.getDb().db('homes').collection('Agents').find();
-
   //Display the results of the search in an array so its readable in chrome
   if (result == null) {
     res.status(500).json(response.error || 'There was an error while adding your agent. Please try again.');
   } else {
     result.toArray().then((lists) => {
-      res.setHeader('Content-Type', 'application/json');
+      res.setHeader('Content-Type', 'application/json/html');
       res.status(200).json(lists);
     });
   }

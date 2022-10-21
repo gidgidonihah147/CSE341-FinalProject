@@ -6,8 +6,11 @@ routes.use('/', require('./swagger'));
 routes.use('/oauth', require('./oauth'));
 routes.use('/oauth-callback', require('./oauth-callback'));
 routes.use('/agents', require('./agents'));
+routes.use('/homes', require('./homes'));
 routes.use('/buyers', require('./buyers'));
 routes.use('/closed_deals', require('./closed_deals'));
+routes.use('/logout',require('./logout'));
+
 
 routes.use('/',(req,res)=>{
     const htmlFile= './main/index.html';
@@ -15,9 +18,6 @@ routes.use('/',(req,res)=>{
     res.setHeader('Content-Type','text/html');
     fs.createReadStream(htmlFile).pipe(res);
 });
-
-
-
 
 
 

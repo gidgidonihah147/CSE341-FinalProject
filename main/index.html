@@ -13,11 +13,9 @@
 <body>
     <header>
         <h1>
-            Homes For Sale Now
+            <a href="/">Homes For Sale Now</a>
         </h1>
-        <div class="content unauthorized">
-            <a class="login" href="/oauth">Sign Into Github</a>
-        </div>
+
         <nav>
             <ul>
                 <li class="homes">
@@ -48,10 +46,11 @@
     </main>
     <footer>
         <p>Homes For Sale Now - CSE 341 - Group Project</p>
+        <a class="logout" href="/logout">logout</a>
     </footer>
     <script>
         const URL_PARAMS = new URLSearchParams(window.location.search);
-        const TOKEN = URL_PARAMS.get('code');
+        const TOKEN = URL_PARAMS.get('token');
 
         // Show an element
         const show = (selector) => {
@@ -67,6 +66,8 @@
             hide('.content.unauthorized');
             show('.content.authorized');
         }
+
+
     </script>
     <style>
         :root {
@@ -99,6 +100,7 @@
             top: 3%;
             right: 10%;
         }
+
 
 
         nav {

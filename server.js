@@ -1,10 +1,14 @@
 const express = require('express')
 const mongodb = require('./database/mongodb');
 const bodyParser = require('body-parser');
+const session = require('express-session');
+
 
 
 const app = express()
 const port = 3000
+
+
 
 app
   .use(bodyParser.json())
@@ -13,6 +17,7 @@ app
     next();
   })
   .use('/', require('./routes'));
+
 
 //run the initDb function on the mongodb when the server starts so that it can populate the data needed.
 mongodb.initDb((err, mongodb) => {
