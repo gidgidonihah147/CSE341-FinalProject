@@ -43,12 +43,11 @@ const addClosed_Deal = async (req, res) => {
   const Closed_Deal = {
     Home_ID: req.body.Home_ID,
     Buyer_ID: req.body.Buyer_ID,
-    Last_Name: req.body.Last_Name,
     Address: req.body.Address,
-    Sold_Price: Sold_Price,
+    Sold_Price: req.body.Sold_Price,
     Date_Closed: req.body.Date_Closed,
   };
-  if (req.body.Home_ID != null & req.body.Buyer_ID != null & req.body.Last_Name != null & req.body.Address != null & req.body.Sold_Price != null & req.body.Date_Closed != null) {
+  if (req.body.Home_ID != null & req.body.Buyer_ID != null & req.body.Address != null & req.body.Sold_Price != null & req.body.Date_Closed != null) {
     const response = await mongodb.getDb().db('homes').collection('Closed_Deals').insertOne(Closed_Deal);
     if (response.insertedCount > 0) {
       res.status(201).json(response.ops[0]);
@@ -79,12 +78,11 @@ const updateClosed_Deal = async (req, res) => {
   const Closed_Deal = {
     Home_ID: req.body.Home_ID,
     Buyer_ID: req.body.Buyer_ID,
-    Last_Name: req.body.Last_Name,
     Address: req.body.Address,
-    Sold_Price: Sold_Price,
+    Sold_Price: req.body.Sold_Price,
     Date_Closed: req.body.Date_Closed,
   };
-  if (req.body.Home_ID != null & req.body.Buyer_ID != null & req.body.Last_Name != null & req.body.Address != null & req.body.Sold_Price != null & req.body.Date_Closed != null) {
+  if (req.body.Home_ID != null & req.body.Buyer_ID != null & req.body.Address != null & req.body.Sold_Price != null & req.body.Date_Closed != null) {
 
     const response = await mongodb.getDb().db('homes').collection('Closed_Deals').replaceOne({
       _id: userId
