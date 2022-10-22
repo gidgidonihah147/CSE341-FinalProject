@@ -14,7 +14,7 @@ const getAgents = async (req, res) => {
     res.status(500).json(response.error || 'There was an error while adding your agent. Please try again.');
   } else {
     result.toArray().then((lists) => {
-      res.setHeader('Content-Type', 'application/json/html');
+      res.setHeader('Content-Type', 'application/json');
       res.status(200).json(lists);
     });
   }
