@@ -2,7 +2,7 @@
 const routes = require ('express').Router();
 
 //require the Movies controller so we can pull in the needed variables
-const controller = require('../controllers/Homes');
+const controller = require('../controllers/homes');
 
 //If no ID is in the URL then run the .getAll function to pull the whole database
 routes.get('/', controller.getHomes);
