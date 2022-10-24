@@ -5,10 +5,10 @@
     "description": "Swagger API Documentation for the final projec",
     "version": "1.0.0"
   },
-  "host": "localhost:3000",
+  "host": "homesforsalenow.onrender.com",
   "basePath": "/",
   "schemes": [
-    "http"
+    "https"
   ],
   "paths": {
     "/api-docs": {
