@@ -49,24 +49,39 @@ const addClosed_Deal = async (req, res) => {
   };
   if (req.body.Home_ID != null & req.body.Buyer_ID != null & req.body.Address != null & req.body.Sold_Price != null & req.body.Date_Closed != null) {
     const response = await mongodb.getDb().db('homes').collection('Closed_Deals').insertOne(Closed_Deal);
-    if (response.insertedCount > 0) {
-      res.status(201).json(response.ops[0]);
-    } else {
-      res.status(500).json(response.error || 'There was an error while adding your closed deal. Please try again.');
-    }
-  }
-    
-    const response = await mongodb.getDb().db('homes').collection('Closed_Deals').insertOne(Closed_Deal);
-
     if (response.acknowledged) {
       res.status(201).json(response);
       console.log(`You have successfully added a new closed deal to the database.`)
     }
- 
     else {
-      res.status(500).json(response.error || 'There was an error while adding your closed_deal. Please try again.');
+      res.status(500).json(response.error || 'There was an error while adding your closed deal. Please try again.');
     }
+  } else {
+    res.status(400).json('Please enter all fields of data then try again.');
+    console.log(Closed_Deal);
   }
+};
+
+  // if (req.body.Home_ID != null & req.body.Buyer_ID != null & req.body.Address != null & req.body.Sold_Price != null & req.body.Date_Closed != null) {
+  //   const response = await mongodb.getDb().db('homes').collection('Closed_Deals').insertOne(Closed_Deal);
+  //   if (response.insertedCount > 0) {
+  //     res.status(201).json(response.ops[0]);
+  //   } else {
+  //     res.status(500).json(response.error || 'There was an error while adding your closed deal. Please try again.');
+  //   }
+  // }
+    
+  //   const response = await mongodb.getDb().db('homes').collection('Closed_Deals').insertOne(Closed_Deal);
+
+  //   if (response.acknowledged) {
+  //     res.status(201).json(response);
+  //     console.log(`You have successfully added a new closed deal to the database.`)
+  //   }
+ 
+  //   else {
+  //     res.status(500).json(response.error || 'There was an error while adding your closed_deal. Please try again.');
+  //   }
+  // }
   
 
 
