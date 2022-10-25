@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 
-const buyersController = require('../controllers/buyers');
+const buyersController = require('../controllers/buyers.ts');
 
 router.get('/', buyersController.getAllBuyers);
 router.get('/:id', buyersController.getSingleBuyer);

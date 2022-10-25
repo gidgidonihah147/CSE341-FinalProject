@@ -1,5 +1,5 @@
 //Pull the DB connection from the database file
-const mongodb = require('../database/mongodb');
+const mongodb = require('../database/mongodb.ts');
 //Pull in the object id from the URL for the getSingle search
 const ObjectId = require('mongodb').ObjectId;
 
@@ -9,7 +9,7 @@ const getClosed_Deals = async (req, res) => {
   const result = await mongodb.getDb().db('homes').collection('Closed_Deals').find();
 
   if (result == null) {
-    res.status(500).json(response.error || 'There was an error while adding your closed deal. Please try again.');
+    res.status(500).json(result.error || 'There was an error while adding your closed deal. Please try again.');
   } else {
     result.toArray().then((lists) => {
       res.setHeader('Content-Type', 'application/json');
@@ -47,6 +47,7 @@ const addClosed_Deal = async (req, res) => {
     Sold_Price: req.body.Sold_Price,
     Date_Closed: req.body.Date_Closed,
   };
+  // @ts-ignore
   if (req.body.Home_ID != null & req.body.Buyer_ID != null & req.body.Address != null & req.body.Sold_Price != null & req.body.Date_Closed != null) {
     const response = await mongodb.getDb().db('homes').collection('Closed_Deals').insertOne(Closed_Deal);
     if (response.acknowledged) {
@@ -97,6 +98,7 @@ const updateClosed_Deal = async (req, res) => {
     Sold_Price: req.body.Sold_Price,
     Date_Closed: req.body.Date_Closed,
   };
+  // @ts-ignore
   if (req.body.Home_ID != null & req.body.Buyer_ID != null & req.body.Address != null & req.body.Sold_Price != null & req.body.Date_Closed != null) {
 
     const response = await mongodb.getDb().db('homes').collection('Closed_Deals').replaceOne({

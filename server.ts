@@ -1,5 +1,5 @@
 const express = require('express')
-const mongodb = require('./database/mongodb');
+const mongodb = require('./database/mongodb.ts');
 const bodyParser = require('body-parser');
 const session = require('express-session');
 
@@ -16,7 +16,7 @@ app
     res.setHeader('Access-Control-Allow-Origin', '*');
     next();
   })
-  .use('/', require('./routes'));
+  .use('/', require('./routes/index.ts'));
 
 
 mongodb.initDb((err, mongodb) => {

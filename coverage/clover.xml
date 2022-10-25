@@ -4,7 +4,7 @@
     <metrics statements="310" coveredstatements="166" conditionals="96" coveredconditionals="13" methods="41" coveredmethods="17" elements="447" coveredelements="196" complexity="0" loc="310" ncloc="310" packages="4" files="15" classes="15"/>
     <package name="CSE341-FinalProject">
       <metrics statements="15" coveredstatements="12" conditionals="2" coveredconditionals="1" methods="2" coveredmethods="2"/>
-      <file name="server.js" path="/Users/aaroncalahorra/Documents/BYUI/CSE341-FinalProject/server.js">
+      <file name="server.ts" path="/Users/aaroncalahorra/Documents/BYUI/CSE341-FinalProject/server.ts">
         <metrics statements="15" coveredstatements="12" conditionals="2" coveredconditionals="1" methods="2" coveredmethods="2"/>
         <line num="1" count="2" type="stmt"/>
         <line num="2" count="2" type="stmt"/>
@@ -25,7 +25,7 @@
     </package>
     <package name="CSE341-FinalProject.controllers">
       <metrics statements="198" coveredstatements="75" conditionals="90" coveredconditionals="10" methods="28" coveredmethods="12"/>
-      <file name="agents.js" path="/Users/aaroncalahorra/Documents/BYUI/CSE341-FinalProject/controllers/agents.js">
+      <file name="agents.ts" path="/Users/aaroncalahorra/Documents/BYUI/CSE341-FinalProject/controllers/agents.ts">
         <metrics statements="49" coveredstatements="19" conditionals="24" coveredconditionals="3" methods="7" coveredmethods="3"/>
         <line num="2" count="2" type="stmt"/>
         <line num="4" count="2" type="stmt"/>
@@ -77,7 +77,7 @@
         <line num="131" count="0" type="cond" truecount="0" falsecount="2"/>
         <line num="137" count="2" type="stmt"/>
       </file>
-      <file name="buyers.js" path="/Users/aaroncalahorra/Documents/BYUI/CSE341-FinalProject/controllers/buyers.js">
+      <file name="buyers.ts" path="/Users/aaroncalahorra/Documents/BYUI/CSE341-FinalProject/controllers/buyers.ts">
         <metrics statements="51" coveredstatements="18" conditionals="18" coveredconditionals="1" methods="7" coveredmethods="3"/>
         <line num="1" count="2" type="stmt"/>
         <line num="2" count="2" type="stmt"/>
@@ -131,7 +131,7 @@
         <line num="102" count="0" type="stmt"/>
         <line num="106" count="2" type="stmt"/>
       </file>
-      <file name="closed_deals.js" path="/Users/aaroncalahorra/Documents/BYUI/CSE341-FinalProject/controllers/closed_deals.js">
+      <file name="closed_deals.ts" path="/Users/aaroncalahorra/Documents/BYUI/CSE341-FinalProject/controllers/closed_deals.ts">
         <metrics statements="49" coveredstatements="19" conditionals="24" coveredconditionals="3" methods="7" coveredmethods="3"/>
         <line num="2" count="2" type="stmt"/>
         <line num="4" count="2" type="stmt"/>
@@ -183,7 +183,7 @@
         <line num="139" count="0" type="cond" truecount="0" falsecount="2"/>
         <line num="145" count="2" type="stmt"/>
       </file>
-      <file name="homes.js" path="/Users/aaroncalahorra/Documents/BYUI/CSE341-FinalProject/controllers/homes.js">
+      <file name="homes.ts" path="/Users/aaroncalahorra/Documents/BYUI/CSE341-FinalProject/controllers/homes.ts">
         <metrics statements="49" coveredstatements="19" conditionals="24" coveredconditionals="3" methods="7" coveredmethods="3"/>
         <line num="2" count="2" type="stmt"/>
         <line num="4" count="2" type="stmt"/>
@@ -238,7 +238,7 @@
     </package>
     <package name="CSE341-FinalProject.database">
       <metrics statements="17" coveredstatements="13" conditionals="4" coveredconditionals="2" methods="4" coveredmethods="3"/>
-      <file name="mongodb.js" path="/Users/aaroncalahorra/Documents/BYUI/CSE341-FinalProject/database/mongodb.js">
+      <file name="mongodb.ts" path="/Users/aaroncalahorra/Documents/BYUI/CSE341-FinalProject/database/mongodb.ts">
         <metrics statements="17" coveredstatements="13" conditionals="4" coveredconditionals="2" methods="4" coveredmethods="3"/>
         <line num="5" count="2" type="stmt"/>
         <line num="7" count="2" type="stmt"/>
@@ -261,7 +261,7 @@
     </package>
     <package name="CSE341-FinalProject.routes">
       <metrics statements="80" coveredstatements="66" conditionals="0" coveredconditionals="0" methods="7" coveredmethods="0"/>
-      <file name="agents.js" path="/Users/aaroncalahorra/Documents/BYUI/CSE341-FinalProject/routes/agents.js">
+      <file name="agents.ts" path="/Users/aaroncalahorra/Documents/BYUI/CSE341-FinalProject/routes/agents.ts">
         <metrics statements="8" coveredstatements="8" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
         <line num="2" count="2" type="stmt"/>
         <line num="5" count="2" type="stmt"/>
@@ -272,7 +272,7 @@
         <line num="20" count="2" type="stmt"/>
         <line num="23" count="2" type="stmt"/>
       </file>
-      <file name="buyers.js" path="/Users/aaroncalahorra/Documents/BYUI/CSE341-FinalProject/routes/buyers.js">
+      <file name="buyers.ts" path="/Users/aaroncalahorra/Documents/BYUI/CSE341-FinalProject/routes/buyers.ts">
         <metrics statements="9" coveredstatements="9" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
         <line num="1" count="2" type="stmt"/>
         <line num="2" count="2" type="stmt"/>
@@ -284,7 +284,7 @@
         <line num="10" count="2" type="stmt"/>
         <line num="12" count="2" type="stmt"/>
       </file>
-      <file name="closed_deals.js" path="/Users/aaroncalahorra/Documents/BYUI/CSE341-FinalProject/routes/closed_deals.js">
+      <file name="closed_deals.ts" path="/Users/aaroncalahorra/Documents/BYUI/CSE341-FinalProject/routes/closed_deals.ts">
         <metrics statements="8" coveredstatements="8" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
         <line num="2" count="2" type="stmt"/>
         <line num="5" count="2" type="stmt"/>
@@ -295,7 +295,7 @@
         <line num="17" count="2" type="stmt"/>
         <line num="20" count="2" type="stmt"/>
       </file>
-      <file name="homes.js" path="/Users/aaroncalahorra/Documents/BYUI/CSE341-FinalProject/routes/homes.js">
+      <file name="homes.ts" path="/Users/aaroncalahorra/Documents/BYUI/CSE341-FinalProject/routes/homes.ts">
         <metrics statements="8" coveredstatements="8" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
         <line num="2" count="2" type="stmt"/>
         <line num="5" count="2" type="stmt"/>
@@ -306,7 +306,7 @@
         <line num="20" count="2" type="stmt"/>
         <line num="23" count="2" type="stmt"/>
       </file>
-      <file name="index.js" path="/Users/aaroncalahorra/Documents/BYUI/CSE341-FinalProject/routes/index.js">
+      <file name="index.ts" path="/Users/aaroncalahorra/Documents/BYUI/CSE341-FinalProject/routes/index.ts">
         <metrics statements="16" coveredstatements="12" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
         <line num="1" count="2" type="stmt"/>
         <line num="2" count="2" type="stmt"/>
@@ -325,7 +325,7 @@
         <line num="19" count="0" type="stmt"/>
         <line num="24" count="2" type="stmt"/>
       </file>
-      <file name="logout.js" path="/Users/aaroncalahorra/Documents/BYUI/CSE341-FinalProject/routes/logout.js">
+      <file name="logout.ts" path="/Users/aaroncalahorra/Documents/BYUI/CSE341-FinalProject/routes/logout.ts">
         <metrics statements="6" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
         <line num="1" count="2" type="stmt"/>
         <line num="2" count="2" type="stmt"/>
@@ -334,7 +334,7 @@
         <line num="6" count="0" type="stmt"/>
         <line num="9" count="2" type="stmt"/>
       </file>
-      <file name="oauth-callback.js" path="/Users/aaroncalahorra/Documents/BYUI/CSE341-FinalProject/routes/oauth-callback.js">
+      <file name="oauth-callback.ts" path="/Users/aaroncalahorra/Documents/BYUI/CSE341-FinalProject/routes/oauth-callback.ts">
         <metrics statements="12" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="0"/>
         <line num="1" count="2" type="stmt"/>
         <line num="2" count="2" type="stmt"/>
@@ -349,7 +349,7 @@
         <line num="25" count="0" type="stmt"/>
         <line num="30" count="2" type="stmt"/>
       </file>
-      <file name="oauth.js" path="/Users/aaroncalahorra/Documents/BYUI/CSE341-FinalProject/routes/oauth.js">
+      <file name="oauth.ts" path="/Users/aaroncalahorra/Documents/BYUI/CSE341-FinalProject/routes/oauth.ts">
         <metrics statements="6" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
         <line num="1" count="2" type="stmt"/>
         <line num="2" count="2" type="stmt"/>
@@ -358,7 +358,7 @@
         <line num="7" count="0" type="stmt"/>
         <line num="12" count="2" type="stmt"/>
       </file>
-      <file name="swagger.js" path="/Users/aaroncalahorra/Documents/BYUI/CSE341-FinalProject/routes/swagger.js">
+      <file name="swagger.ts" path="/Users/aaroncalahorra/Documents/BYUI/CSE341-FinalProject/routes/swagger.ts">
         <metrics statements="7" coveredstatements="7" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
         <line num="1" count="2" type="stmt"/>
         <line num="2" count="2" type="stmt"/>

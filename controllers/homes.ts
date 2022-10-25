@@ -1,5 +1,5 @@
 //Pull the DB connection from the database file
-const mongodb = require('../database/mongodb');
+const mongodb = require('../database/mongodb.ts');
 //Pull in the object id from the URL for the getSingle search
 const ObjectId = require('mongodb').ObjectId;
 
@@ -11,7 +11,7 @@ const getHomes = async (req, res) => {
 
   //Display the results of the search in an array so its readable in chrome
   if (result == null) {
-    res.status(500).json(response.error || 'There was an error while adding your Home. Please try again.');
+    res.status(500).json(result.error || 'There was an error while adding your Home. Please try again.');
   } else {
     result.toArray().then((lists) => {
       res.setHeader('Content-Type', 'application/json');
@@ -29,7 +29,7 @@ const getHome = async (req, res) => {
   } else {
     //Interact with the URL to get the object which in this case would be the ID of the Home
     const dbId = new ObjectId(req.params.id);
-    //Pull the results from the table called Homes from the DB called in the mongodb.js file
+    //Pull the results from the table called Homes from the DB called in the mongodb.ts file
     const result = await mongodb.getDb().db('homes').collection('Homes').find({
       _id: dbId
     });
@@ -53,17 +53,18 @@ const addHome = async (req, res) => {
     Agent: req.body.Agent,
     Date_Posted: req.body.Date_Posted
   };
+  // @ts-ignore
   if (req.body.Home_ID != null & req.body.Address != null & req.body.Price != null & req.body.Agent != null & req.body.Date_Posted != null) {
     //adds the Movie to the database using the data from the Movie variable
-    const response = await mongodb.getDb().db('homes').collection('Homes').insertOne(Home);
-    //If the response back from the database was acknowledged (request successful) then note as much in the console
-    if (response.acknowledged) {
-      res.status(201).json(response);
+    const result = await mongodb.getDb().db('homes').collection('Homes').insertOne(Home);
+    //If the result back from the database was acknowledged (request successful) then note as much in the console
+    if (result.acknowledged) {
+      res.status(201).json(result);
       console.log(`You have successfully added a new Home to the database.`)
     }
     //If unsuccessful show a server error of 500 and post an error message to the console
     else {
-      res.status(500).json(response.error || 'There was an error while adding your movie. Please try again.');
+      res.status(500).json(result.error || 'There was an error while adding your movie. Please try again.');
     }
   } else {
     res.status(400).json('Please enter all fields of data then try again.');
@@ -84,20 +85,21 @@ const updateHome = async (req, res) => {
     Agent: req.body.Agent,
     Date_Posted: req.body.Date_Posted
   };
+  // @ts-ignore
   if (req.body.Home_ID != null & req.body.Address != null & req.body.Price != null & req.body.Agent != null & req.body.Date_Posted != null) {
     //replaces the movie data in the database using the data from the movie variable
-    const response = await mongodb.getDb().db('homes').collection('Homes').replaceOne({
+    const result = await mongodb.getDb().db('homes').collection('Homes').replaceOne({
       _id: userId
     }, Home);
-    //if the response back from the database that there was at least one row deleted, then output a success message to the log and send a status of 204
-    if (response.modifiedCount > 0) {
+    //if the result back from the database that there was at least one row deleted, then output a success message to the log and send a status of 204
+    if (result.modifiedCount > 0) {
       res.status(204).send();
       console.log(`The update you requested was successful for ID:${userId}`)
     }
     //If unsuccessful show a server error of 500 and post an error message to the console
     else {
-      res.status(500).json(response.error || 'There was an error while updating the Home. Please try again.');
-      console.log(response);
+      res.status(500).json(result.error || 'There was an error while updating the Home. Please try again.');
+      console.log(result);
     }
   } else {
     res.status(400).json('Please enter all fields of data then try again.');
@@ -116,15 +118,15 @@ const removeHome = async (req, res) => {
     //Interact with the URL to get the object which in this case would be the ID of the Home
     const userId = new ObjectId(req.params.id);
     //creates the variable of Home so that when we post the data to the database it knows what to update where with the help of bodyparser added in the server page
-    const response = await mongodb.getDb().db('homes').collection('Homes').deleteOne({_id: userId}, true);
-    //if the response back from the database that there was at least one row deleted, then output a success message to the log and send a status of 204
-    if (response.deletedCount > 0) {
+    const result = await mongodb.getDb().db('homes').collection('Homes').deleteOne({_id: userId}, true);
+    //if the result back from the database that there was at least one row deleted, then output a success message to the log and send a status of 204
+    if (result.deletedCount > 0) {
       res.status(204).send();
       console.log(`The Home with the ID of ${userId} has been deleted.`)
     }
     //If unsuccessful show a server error of 500 and post an error message to the console
     else {
-      res.status(500).json(response.error || 'There was an error while deleting the Home. Please try again.');
+      res.status(500).json(result.error || 'There was an error while deleting the Home. Please try again.');
     }
   }
 };

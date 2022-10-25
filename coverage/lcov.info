@@ -1,5 +1,5 @@
 TN:
-SF:server.js
+SF:server.ts
 FN:15,(anonymous_0)
 FN:22,(anonymous_1)
 FNF:2
@@ -29,7 +29,7 @@ BRF:2
 BRH:1
 end_of_record
 TN:
-SF:controllers/agents.js
+SF:controllers/agents.ts
 FN:8,(anonymous_0)
 FN:16,(anonymous_1)
 FN:25,(anonymous_2)
@@ -125,7 +125,7 @@ BRF:24
 BRH:3
 end_of_record
 TN:
-SF:controllers/buyers.js
+SF:controllers/buyers.ts
 FN:5,(anonymous_0)
 FN:8,(anonymous_1)
 FN:17,(anonymous_2)
@@ -217,7 +217,7 @@ BRF:18
 BRH:1
 end_of_record
 TN:
-SF:controllers/closed_deals.js
+SF:controllers/closed_deals.ts
 FN:7,(anonymous_0)
 FN:14,(anonymous_1)
 FN:23,(anonymous_2)
@@ -313,7 +313,7 @@ BRF:24
 BRH:3
 end_of_record
 TN:
-SF:controllers/homes.js
+SF:controllers/homes.ts
 FN:7,(anonymous_0)
 FN:16,(anonymous_1)
 FN:25,(anonymous_2)
@@ -409,7 +409,7 @@ BRF:24
 BRH:3
 end_of_record
 TN:
-SF:database/mongodb.js
+SF:database/mongodb.ts
 FN:14,(anonymous_0)
 FN:23,(anonymous_1)
 FN:31,(anonymous_2)
@@ -447,7 +447,7 @@ BRF:4
 BRH:2
 end_of_record
 TN:
-SF:routes/agents.js
+SF:routes/agents.ts
 FNF:0
 FNH:0
 DA:2,2
@@ -464,7 +464,7 @@ BRF:0
 BRH:0
 end_of_record
 TN:
-SF:routes/buyers.js
+SF:routes/buyers.ts
 FNF:0
 FNH:0
 DA:1,2
@@ -482,7 +482,7 @@ BRF:0
 BRH:0
 end_of_record
 TN:
-SF:routes/closed_deals.js
+SF:routes/closed_deals.ts
 FNF:0
 FNH:0
 DA:2,2
@@ -499,7 +499,7 @@ BRF:0
 BRH:0
 end_of_record
 TN:
-SF:routes/homes.js
+SF:routes/homes.ts
 FNF:0
 FNH:0
 DA:2,2
@@ -516,7 +516,7 @@ BRF:0
 BRH:0
 end_of_record
 TN:
-SF:routes/index.js
+SF:routes/index.ts
 FN:15,(anonymous_0)
 FNF:1
 FNH:0
@@ -543,7 +543,7 @@ BRF:0
 BRH:0
 end_of_record
 TN:
-SF:routes/logout.js
+SF:routes/logout.ts
 FN:4,(anonymous_0)
 FNF:1
 FNH:0
@@ -560,7 +560,7 @@ BRF:0
 BRH:0
 end_of_record
 TN:
-SF:routes/oauth-callback.js
+SF:routes/oauth-callback.ts
 FN:8,(anonymous_0)
 FN:17,(anonymous_1)
 FN:18,(anonymous_2)
@@ -589,7 +589,7 @@ BRF:0
 BRH:0
 end_of_record
 TN:
-SF:routes/oauth.js
+SF:routes/oauth.ts
 FN:6,(anonymous_0)
 FNF:1
 FNH:0
@@ -606,7 +606,7 @@ BRF:0
 BRH:0
 end_of_record
 TN:
-SF:routes/swagger.js
+SF:routes/swagger.ts
 FNF:0
 FNH:0
 DA:1,2

@@ -3,7 +3,7 @@
 <html lang="en">
 
 <head>
-    <title>Code coverage report for CSE341-FinalProject/controllers/homes.js</title>
+    <title>Code coverage report for CSE341-FinalProject/controllers/homes.ts</title>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="../../prettify.css" />
     <link rel="stylesheet" href="../../base.css" />
@@ -19,7 +19,7 @@
 <body>
 <div class='wrapper'>
     <div class='pad1'>
-        <h1><a href="../../index.html">All files</a> / <a href="index.html">CSE341-FinalProject/controllers</a> homes.js</h1>
+        <h1><a href="../../index.html">All files</a> / <a href="index.html">CSE341-FinalProject/controllers</a> homes.ts</h1>
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
@@ -370,7 +370,7 @@ const getHome = <span class="fstat-no" title="function not covered" >as</span>yn
   } else {
     //Interact with the URL to get the object which in this case would be the ID of the Home
     const dbId = <span class="cstat-no" title="statement not covered" >new ObjectId(req.params.id);</span>
-    //Pull the results from the table called Homes from the DB called in the mongodb.js file
+    //Pull the results from the table called Homes from the DB called in the mongodb.ts file
     const result = <span class="cstat-no" title="statement not covered" >await mongodb.getDb().db('homes').collection('Homes').find({</span>
       _id: dbId
     });
@@ -496,4 +496,3 @@ module.exports = {
         <script src="../../block-navigation.js"></script>
     </body>
 </html>
-    

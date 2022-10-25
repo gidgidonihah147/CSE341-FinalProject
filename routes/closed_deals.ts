@@ -2,7 +2,7 @@
 const routes = require ('express').Router();
 
 
-const controller = require('../controllers/closed_deals');
+const controller = require('../controllers/closed_deals.ts');
 
 
 routes.get('/', controller.getClosed_Deals);
